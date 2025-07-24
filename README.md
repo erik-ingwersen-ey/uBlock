@@ -102,6 +102,9 @@ In Thunderbird, uBlock Origin does not affect emails, just feeds.
 
 uBO should be compatible with any Chromium-based browser.
 
+Starting with Chrome 139, only Manifest v3 extensions are supported. To build
+the MV3 version of uBlock Origin run `make mv3-chromium`.
+
 #### All Programs
 
 Do **NOT** use uBO with any other content blocker. uBO [performs][Performance] as well as or better than most popular blockers. Other blockers can prevent uBO's privacy or anti-blocker-defusing features from working correctly.
