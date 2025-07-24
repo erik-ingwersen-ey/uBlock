@@ -19,15 +19,6 @@
     Home: https://github.com/gorhill/uBlock
 */
 
-function patchRuleWithRequestDomains(rule, out) {
-    const requestDomains = rule.condition.requestDomains;
-    delete rule.condition.requestDomains;
-    for ( const domain of requestDomains ) {
-        const newRule = structuredClone(rule);
-        newRule.condition.urlFilter = `||${domain}^`;
-        out.push(newRule);
-    }
-}
 
 export function patchRuleset(ruleset) {
     const out = [];
